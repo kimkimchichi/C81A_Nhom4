@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF3FF"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.OOD.malissa.shoopingcart.Activities.Account">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="Edit Account Information"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#4D74A3"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="41dp"
+        android:text="Username:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#164983"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_marginTop="28dp"
+        android:text="Password:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#164983"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/accountCPwordTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_alignRight="@+id/textView6"
+        android:layout_marginTop="28dp"
+        android:text="Confirm Password:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/billText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="38dp"
+        android:text="Bill: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#164983"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/accountUname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView6"
+        android:layout_alignEnd="@+id/textView4"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@+id/textView5"
+        android:background="@android:color/transparent"
+        android:enabled="false"
+        android:textColor="#164983" />
+
+    <EditText
+        android:id="@+id/accountPword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accountUname"
+        android:layout_alignStart="@+id/accountUname"
+        android:layout_alignLeft="@+id/accountUname"
+        android:layout_alignEnd="@+id/accountUname"
+        android:layout_alignRight="@+id/accountUname"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:enabled="false"
+        android:textColor="#164983" />
+
+    <EditText
+        android:id="@+id/accountCPword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accountPword"
+        android:layout_alignStart="@+id/accountPword"
+        android:layout_alignLeft="@+id/accountPword"
+        android:layout_alignEnd="@+id/accountPword"
+        android:layout_alignRight="@+id/accountPword"
+        android:layout_alignBottom="@+id/accountCPwordTitle"
+        android:layout_marginTop="15dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/accountEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_alignEnd="@+id/accountPword"
+        android:layout_alignRight="@+id/accountPword"
+        android:layout_marginTop="91dp"
+        android:background="#164983"
+        android:text="Edit"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/accountReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignTop="@+id/accountEdit"
+        android:background="#F8FAFD"
+        android:text="Return"
+        android:textColor="#808495" />
+
+    <Button
+        android:id="@+id/accountCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignTop="@+id/accountSave"
+        android:text="Cancel"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/accountSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accountCPword"
+        android:layout_alignEnd="@+id/accountCPword"
+        android:layout_alignRight="@+id/accountCPword"
+        android:layout_marginTop="48dp"
+        android:text="Save"
+        android:visibility="gone" />
+
+</RelativeLayout>

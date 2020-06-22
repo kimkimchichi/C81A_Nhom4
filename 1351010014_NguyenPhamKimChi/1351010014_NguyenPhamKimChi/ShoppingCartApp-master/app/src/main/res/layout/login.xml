@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF3FF"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.OOD.malissa.shoopingcart.Activities.Interfaces.Login">
+
+    <!-- Fixed an annoying thing where the first focus is on password edittext 4/15/15-->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="false"
+        android:layout_marginStart="129dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="180dp"
+        android:text="Username: "
+        android:textColor="#174A84"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+
+        android:layout_alignLeft="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="43dp"
+        android:layout_toLeftOf="@+id/passwordField"
+        android:text="Password: "
+        android:textColor="#174A84"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:ems="10"
+        android:focusable="true"
+        android:inputType="textPassword"
+        android:textColor="#174A84"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/usernameField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_alignEnd="@+id/passwordField"
+        android:layout_alignRight="@+id/passwordField"
+        android:layout_toRightOf="@+id/textView"
+        android:focusable="true"
+        android:textColor="#174A84"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/userTypeCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_marginTop="35dp"
+        android:checked="false"
+        android:text="Log In as Seller"
+        android:textColor="#839FC2"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/logInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userTypeCheck"
+        android:layout_alignEnd="@+id/passwordField"
+        android:layout_alignRight="@+id/passwordField"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="100dp"
+        android:background="#164983"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="Log In"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:text="Login"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#6FB0FA"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/userTypeCheck"
+        android:layout_alignTop="@+id/logInButton"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="100dp"
+        android:background="#4D74A3"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="Register as new user"
+        android:textColor="#fff"
+        android:textStyle="italic" />
+
+
+</RelativeLayout>

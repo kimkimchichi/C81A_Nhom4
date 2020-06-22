@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    >
+    <!-- Added descendantFocusability so item can be longclicked
+    Reference: http://stackoverflow.com/questions/20932150/listview-long-click-not-working-when-a-button-is-in-list-->
+
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#164983"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/add_cart"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/product_name"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="35dp"
+        android:background="#164983"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/add_cart"
+        android:textColor="#fff" />
+</RelativeLayout>

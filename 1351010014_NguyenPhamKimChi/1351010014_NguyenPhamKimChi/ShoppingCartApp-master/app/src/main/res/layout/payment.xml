@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EFF3FF"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.OOD.malissa.shoopingcart.Activities.Payment">
+
+    <TextView
+        android:id="@+id/payment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Payment Information"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#4D74A3"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/existing_cc_title"
+        android:layout_width="185dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/payment_title"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="-99dp"
+        android:layout_marginRight="-99dp"
+        android:layout_toStartOf="@+id/payment_title"
+        android:layout_toLeftOf="@+id/payment_title"
+        android:text="Existing Credit Cards:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#164983"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/cc_select_list"
+        android:layout_width="294dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/existing_cc_title"
+        android:layout_alignStart="@+id/existing_cc_title"
+        android:layout_alignLeft="@+id/existing_cc_title"
+        android:layout_alignRight="@+id/cardNumberText"
+        android:layout_marginRight="-310dp">
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/add_cc_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cc_select_list"
+        android:layout_alignStart="@+id/cc_select_list"
+        android:layout_alignLeft="@+id/cc_select_list"
+        android:layout_marginStart="-3dp"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginTop="-11dp"
+        android:checked="false"
+        android:text="Add New Credit Card"
+        android:textColor="#839FC2"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/cardNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_cc_check"
+        android:layout_alignStart="@+id/payment_title"
+        android:layout_alignLeft="@+id/payment_title"
+        android:layout_alignEnd="@+id/payment_title"
+        android:layout_alignRight="@+id/payment_title"
+        android:layout_marginTop="22dp"
+        android:hint="Name on Card"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/cardNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardNameText"
+        android:layout_alignStart="@+id/cardNameText"
+        android:layout_alignLeft="@+id/cardNameText"
+        android:layout_alignEnd="@+id/cardNameText"
+        android:layout_alignRight="@+id/cardNameText"
+        android:layout_marginTop="17dp"
+        android:hint="Card Number"
+        android:inputType="number"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/expiration_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardNumberText"
+        android:layout_alignStart="@+id/cardNumberText"
+        android:layout_alignLeft="@+id/cardNumberText"
+        android:layout_marginTop="25dp"
+        android:text="Expiration Date:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/month_spin"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/expiration_title"
+        android:layout_alignStart="@+id/expiration_title"
+        android:layout_alignLeft="@+id/expiration_title"
+        android:layout_marginTop="21dp"
+        android:gravity="right"
+        android:spinnerMode="dropdown"
+        android:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/year_spin"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/month_spin"
+        android:layout_alignEnd="@+id/cardNumberText"
+        android:layout_alignRight="@+id/cardNumberText"
+        android:gravity="right"
+        android:spinnerMode="dropdown"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/saveCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/month_spin"
+        android:layout_alignStart="@+id/add_cc_check"
+        android:layout_alignLeft="@+id/add_cc_check"
+        android:layout_marginTop="21dp"
+        android:checked="false"
+        android:text="Save Card for Future Purchases"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/saveCheck"
+        android:layout_alignEnd="@+id/year_spin"
+        android:layout_alignRight="@+id/year_spin"
+        android:layout_marginTop="29dp"
+        android:background="#F8FAFD"
+        android:text="Cancel"
+        android:textColor="#808495" />
+
+    <Button
+        android:id="@+id/purchaseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cancelButton"
+        android:layout_alignStart="@+id/month_spin"
+        android:layout_alignLeft="@+id/month_spin"
+        android:layout_alignBottom="@+id/cancelButton"
+        android:background="#164983"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Purchase"
+        android:textColor="#fff" />
+
+
+</RelativeLayout>
